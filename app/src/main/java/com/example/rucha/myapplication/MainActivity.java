@@ -43,10 +43,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        System.out.print("OnClick2");
+
             if(v.getId()==R.id.Blogin)
             {
-               System.out.print("OnClick");
+
                //Read the username and password from the textbox and convert to string
                 EditText a =(EditText)findViewById(R.id.TFuser);
                 String email =a.getText().toString();
@@ -57,12 +57,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 {
 
                     Json Js =new Json();
-                    String res= Js.sendJson(email,pwd);
-                    uid=res;
+                    int res= Js.sendJson(email,pwd);
 
-                    //NetAsync As = new NetAsync(email,pwd);
-                    //boolean val = true;
-                    if (res!="error") {
+                    if (res==200) {
 
                         Intent i = new Intent(this, MapsActivity.class);
                         i.putExtra("Username", email);
