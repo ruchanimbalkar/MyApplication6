@@ -60,20 +60,20 @@ public class jsonGPS {
             urlConnection.connect();
 
             //Create JSONObject here
-            JSONObject gpsPoint = new JSONObject();
-            gpsPoint.put("Latitude", latitude);
-            gpsPoint.put("Longitude", longitude);
-            gpsPoint.put("TimeStamp", timeStamp);
+            JSONObject location = new JSONObject();
+            location.put("Lat", latitude);
+            location.put("Long", longitude);
+            location.put("timestamp", timeStamp);
 
             Json1 userId =new Json1();
             id = userId.getId();
 
             JSONObject idJson =new JSONObject();
-            idJson.put("userId", id);
+            idJson.put("usrid", id);
 
             JSONObject mainToSend =new JSONObject();
-            mainToSend.put("UserID",userId);
-            mainToSend.put("Point",gpsPoint);
+            mainToSend.put("userid",userId);
+            mainToSend.put("location",location);
 
             OutputStreamWriter out = new OutputStreamWriter(urlConnection.getOutputStream());
             out.write(mainToSend.toString());
