@@ -16,8 +16,8 @@ android:columnCount="3">
     android:layout_row="22"
     android:textSize="22dp"
     android:gravity="center_horizontal"
-    android:layout_alignTop="@+id/TFuser"
-    android:layout_centerHorizontal="true" />
+    android:layout_centerHorizontal="true"
+    android:layout_above="@+id/TFuser" />
 
 <EditText
     android:layout_width="fill_parent"
@@ -67,13 +67,12 @@ android:columnCount="3">
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="fill_parent"
         android:id="@+id/AppIcon"
         android:background="@drawable/mapicon"
         android:scaleType="centerCrop"
         android:paddingTop="50dp"
-        android:layout_alignParentTop="true"
-        android:layout_above="@+id/textView3"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/textView3" />
 
 </RelativeLayout>
