@@ -67,7 +67,7 @@ public class SignUp extends AppCompatActivity  implements View.OnClickListener {
             }
             /*else
             {
-                Json Js = new Json();
+                Json1 Js = new Json1();
                 Js.sendJson(fnamestr, lnamestr, emailstr, dob, sex, pass1str, unamestr);
             }*/
 

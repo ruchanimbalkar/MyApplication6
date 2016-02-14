@@ -9,13 +9,13 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.net.Uri;
+import android.os.StrictMode;
 import android.provider.MediaStore;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -24,7 +24,6 @@ import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.LocationSource;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
@@ -56,6 +55,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
         super.onCreate(savedInstanceState);
+        if (android.os.Build.VERSION.SDK_INT > 9) {
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+        }
         setContentView(R.layout.activity_maps);
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
@@ -231,6 +234,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             int lat = (int) (location.getLatitude());
             int lng = (int)  (location.getLongitude());
             String str = getCurrentTimeStamp();
+
+            jsonGPS sndGPS = new jsonGPS();
+            int res= sndGPS.sendJson(lat,lng,str);
+
+        if (res != 200)
+        {
+            Toast.makeText(this, "Connection Error" , Toast.LENGTH_SHORT).show(); //Pop-up
+        }
+
     }
 
 

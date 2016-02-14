@@ -30,7 +30,7 @@ import java.util.List;
  */
 //testin
 
-public class Json extends AsyncTask{
+public class Json1 extends AsyncTask{
     private static final String LOGIN_URL = "http://54.191.90.109:3000/api/login";
     private static final String TAG_SUCCESS = "success";
     private static final String TAG_MESSAGE = "message";
@@ -141,6 +141,10 @@ public class Json extends AsyncTask{
         }
 
         return result;
+    }
+
+    public int getId() {
+        return id;
     }
 
     protected int doInBackground() {
