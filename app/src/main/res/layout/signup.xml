@@ -9,15 +9,26 @@
         android:layout_width="124dp"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Name"
+        android:text="First Name"
         android:id="@+id/textView5"
         android:textSize="22dp" />
 
     <EditText
-        android:layout_width="match_parent"
+        android:layout_width="144dp"
+        android:layout_height="28dp"
+        android:id="@+id/TFfirstname" />
+
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/TFname"
-        android:layout_weight="0.06" />
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Last Name"
+        android:id="@+id/textView10" />
+
+    <EditText
+        android:layout_width="163dp"
+        android:layout_height="27dp"
+        android:id="@+id/TFlastname" />
 
     <TextView
         android:layout_width="195dp"
@@ -69,9 +80,8 @@
 
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/TFuser"
-        android:layout_weight="0.06" />
+        android:layout_height="26dp"
+        android:id="@+id/TFuser" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -83,7 +93,7 @@
 
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="29dp"
         android:inputType="date"
         android:ems="10"
         android:id="@+id/TFbirthdate" />
@@ -127,9 +137,11 @@
         android:id="@+id/Bsignup"
         android:layout_gravity="right"
         android:onClick="OnSignUpClick" />
+
     <Button
         android:id="@+id/btnDisplay"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_display" />
+        android:layout_height="29dp"
+        android:text="@string/btn_display"
+        android:layout_weight="0.05" />
 </LinearLayout>
