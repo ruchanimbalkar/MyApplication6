@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:weightSum="1"
+android:rowCount="24"
+android:columnCount="3">
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textAppearance="?android:attr/textAppearanceLarge"
+    android:text="Email"
+    android:id="@+id/textView3"
+    android:layout_column="2"
+    android:layout_row="22"
+    android:textSize="22dp"
+    android:gravity="center_horizontal"
+    android:layout_alignTop="@+id/TFuser"
+    android:layout_centerHorizontal="true" />
+
+<EditText
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/TFuser"
+    android:layout_above="@+id/textView4"
+    android:layout_alignParentStart="true" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Password"
+    android:id="@+id/textView4"
+    android:textSize="22dp"
+    android:textAppearance="?android:attr/textAppearanceLarge"
+    android:layout_above="@+id/TFpassword"
+    android:layout_alignStart="@+id/Blogin" />
+
+<EditText
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:inputType="textPassword"
+    android:ems="10"
+    android:id="@+id/TFpassword"
+    android:layout_above="@+id/Blogin"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentEnd="false" />
+
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="LogIn"
+    android:id="@+id/Blogin"
+    android:textSize="30dp"
+    android:onClick="onClick"
+    android:layout_above="@+id/Bsignuph"
+    android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SignUp Here"
+        android:id="@+id/Bsignuph"
+        android:onClick="onClick"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/Blogin" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/AppIcon"
+        android:background="@drawable/mapicon"
+        android:scaleType="centerCrop"
+        android:paddingTop="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/textView3"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>
