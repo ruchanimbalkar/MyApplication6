@@ -48,7 +48,7 @@
 
         <activity android:name=".MapsActivity" android:label="@string/title_activity_maps"></activity>
         <activity android:name=".display"></activity>
-
+        <activity android:name=".trial"></activity>
 
         <activity android:name=".SignUp"></activity>
         <!-- ATTENTION: This was auto-generated to add Google Play services to your project for

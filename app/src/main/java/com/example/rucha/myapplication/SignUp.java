@@ -16,60 +16,28 @@ import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
 
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Locale;
 
 /**
  * Created by Rucha on 2/10/2016.
  */
-public class SignUp extends AppCompatActivity {
+public class SignUp extends AppCompatActivity  implements View.OnClickListener {
 
     private GoogleApiClient client;
-    private RadioGroup radioSexGroup;
-    private RadioButton radioSexButton;
-    private Button btnDisplay;
 
-
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.signup);
-         addListenerOnButton();
+
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
 
+        @Override
+        public void onClick(View v) {
 
-
-        public void addListenerOnButton()
-        {
-            radioSexGroup = (RadioGroup) findViewById(R.id.TFsex);
-            btnDisplay = (Button) findViewById(R.id.btnDisplay);
-
-            btnDisplay.setOnClickListener(new View.OnClickListener() {
-
-                @Override
-                public void onClick(View v) {
-
-                    // get selected radio button from radioGroup
-                    int selectedId = radioSexGroup.getCheckedRadioButtonId();
-
-                    // find the radiobutton by returned id
-                    radioSexButton = (RadioButton) findViewById(selectedId);
-
-                }
-
-            });
-
-        }
-
-
-
-
-    public void OnSignupClick(View v) {
-
-        if(v.getId()==R.id.Bsignup){
+            if(v.getId()==R.id.Bsignup){
 
             EditText fname = (EditText)findViewById(R.id.TFfirstname);
             EditText lname = (EditText)findViewById(R.id.TFlastname);
@@ -77,6 +45,7 @@ public class SignUp extends AppCompatActivity {
             EditText username = (EditText)findViewById(R.id.TFuser);
             EditText dob = (EditText) findViewById(R.id.TFbirthdate);
             EditText pass1 = (EditText)findViewById(R.id.TFpass1);
+            EditText sex= (EditText)findViewById(R.id.TFsex);
             EditText pass2 = (EditText)findViewById(R.id.TFpass2);
 
             String fnamestr = fname.getText().toString();
@@ -86,15 +55,8 @@ public class SignUp extends AppCompatActivity {
             String pass1str = pass1.getText().toString();
             String pass2str = pass2.getText().toString();
             String dobst =  dob.getText().toString();
-            String sex = radioSexButton.getText().toString();
+            String sexstr = sex.getText().toString();
 
-//            DateFormat format = new SimpleDateFormat("YYYY-mm-dd", Locale.ENGLISH);
-//            Date date = null;
-//            try {
-//                date = format.parse(dobst);
-//            } catch (ParseException e) {
-//                e.printStackTrace();
-//            }
 
 
             if(!pass1.equals(pass2))
@@ -106,7 +68,7 @@ public class SignUp extends AppCompatActivity {
             /*else
             {
                 Json Js = new Json();
-                Js.sendJson(fnamestr, lnamestr, emailstr, date, sex, pass1str, unamestr);
+                Js.sendJson(fnamestr, lnamestr, emailstr, dob, sex, pass1str, unamestr);
             }*/
 
 

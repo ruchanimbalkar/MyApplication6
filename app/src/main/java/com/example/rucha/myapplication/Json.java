@@ -44,7 +44,7 @@ public class Json extends AsyncTask{
     public String password;
     public String sex;
     public String username;
-    public Date  birthdate;
+    public String  birthdate;
 
     public int id,result;
 
@@ -57,7 +57,7 @@ public class Json extends AsyncTask{
 
         return  result;
     }
-    protected void sendJson(final String fname, final String lname, final String email, final Date dob, final String gender, final String pswd, final String uname){
+    protected int sendJson(final String fname, final String lname, final String email, final String dob, final String gender, final String pswd, final String uname){
 
         Firstname =fname;
         Lastname =lname;
@@ -67,12 +67,13 @@ public class Json extends AsyncTask{
         username= uname;
         birthdate = dob;
 
-        doInBackground2();
+        result= doInBackground2();
+        return result;
     }
 
 
     //Register
-    private void doInBackground2() {
+    private int doInBackground2() {
 
         String data = "";
 
@@ -109,7 +110,7 @@ public class Json extends AsyncTask{
             out.close();
 
             int HttpResult = urlConnection.getResponseCode();
-
+            result= HttpResult;
             Log.d("test result", "test" + HttpResult);
             Log.e("test2", ""+ HttpResult);
             // if (HttpResult == HttpURLConnection.HTTP_OK) {
@@ -139,7 +140,7 @@ public class Json extends AsyncTask{
                 urlConnection.disconnect();
         }
 
-
+        return result;
     }
 
     protected int doInBackground() {
@@ -149,7 +150,6 @@ public class Json extends AsyncTask{
 
         int tap;
         StringBuilder testB = new StringBuilder();
-
         String http ="http://54.191.90.109:3000/api/login";
 
         HttpURLConnection urlConnection = null;
