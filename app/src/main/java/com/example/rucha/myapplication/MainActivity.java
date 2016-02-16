@@ -5,7 +5,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -13,20 +12,6 @@ import android.widget.Toast;
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.BufferedReader;
-import java.io.DataOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.HashMap;
 
 /**
  * Created by Rucha on 2/10/2016.
@@ -56,7 +41,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if (  ( !email.equals("")) && ( !pwd.equals("")) )
                 {
 
-                    Json Js =new Json();
+                    Json1 Js =new Json1();
                     int res= Js.sendJson(email,pwd);
 
                    //Check with httpresult
