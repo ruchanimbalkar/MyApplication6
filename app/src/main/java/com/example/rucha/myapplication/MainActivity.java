@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if (  ( !email.equals("")) && ( !pwd.equals("")) )
                 {
 
-                    Json1 Js =new Json1();
+                    Json Js =new Json();
                     int res= Js.sendJson(email,pwd);
 
                    //Check with httpresult
