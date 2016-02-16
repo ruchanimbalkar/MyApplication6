@@ -14,15 +14,6 @@
         android:weightSum="1">
 
         <Button
-            android:layout_width="78dp"
-            android:layout_height="match_parent"
-            android:text="cam"
-            android:id="@+id/cbutton"
-            android:onClick="onClick"
-            android:layout_weight="0.02"
-            android:layout_gravity="top|left" />
-
-        <Button
             android:layout_width="93dp"
             android:layout_height="match_parent"
             android:text="Memory"

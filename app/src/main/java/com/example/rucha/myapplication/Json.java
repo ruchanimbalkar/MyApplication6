@@ -46,16 +46,16 @@ public class Json extends AsyncTask{
     public String username;
     public String  birthdate;
 
-    public int id,result;
+    public static int id,result;
 
     public void Json(){}
     protected int sendJson(final String e, final String p) {
         email=e;
         pwd=p;
 
-        result = doInBackground();
+        int result2 = doInBackground();
 
-        return  result;
+        return  result2;
     }
     protected int sendJson(final String fname, final String lname, final String email, final String dob, final String gender, final String pswd, final String uname){
 
@@ -193,11 +193,6 @@ public class Json extends AsyncTask{
                 JSONObject jdat = new JSONObject(testB.toString());
                  id = jdat.getInt("userid");
                 Log.d("id"," " +id);
-
-
-
-
-
             //} else
         {
                 System.out.println(urlConnection.getResponseMessage());
@@ -217,7 +212,9 @@ public class Json extends AsyncTask{
         return result;
     }
 
-
+    public int getId() {
+                return id;
+           }
 
     @Override
     protected Object doInBackground(Object[] params) {

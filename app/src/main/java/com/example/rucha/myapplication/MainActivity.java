@@ -59,7 +59,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     Json Js =new Json();
                     int res= Js.sendJson(email,pwd);
 
-                    if (res==200) {
+                   //Check with httpresult
+                    if (res==200)
+                    {
 
                         Intent i = new Intent(this, MapsActivity.class);
                         i.putExtra("Username", email);
