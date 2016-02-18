@@ -149,7 +149,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         if(v.getId()==R.id.ctext)
         {
-            Intent i = new Intent(MapsActivity.this, display.class);
+            Intent i = new Intent(MapsActivity.this, Updates.class);
             startActivity(i);
         }
     }
