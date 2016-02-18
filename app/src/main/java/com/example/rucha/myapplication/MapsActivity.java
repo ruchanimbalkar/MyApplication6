@@ -100,8 +100,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             }
         };
 
-        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000, 0, listener);
-        locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 1000, 0, listener);
+        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 5000, 0, listener);
+        locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 5000, 0, listener);
                 //        locationListener= new LocationListener() {
 //            @Override
 //            public void onLocationChanged(Location location) {
@@ -149,7 +149,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         if(v.getId()==R.id.ctext)
         {
-            Intent i = new Intent(MapsActivity.this, Updates.class);
+            Log.e("button","clicked");
+            Intent i = new Intent(this,Updates.class );
             startActivity(i);
         }
     }
