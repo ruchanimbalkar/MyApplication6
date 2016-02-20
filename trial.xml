@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <TextView
+        android:layout_width="124dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="First Name"
+        android:id="@+id/textView5"
+        android:textSize="20dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/TFfirstname" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Last Name"
+        android:id="@+id/textView10"
+        android:textSize="20dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="31dp"
+        android:id="@+id/TFlastname" />
+
+    <TextView
+        android:layout_width="195dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Email address"
+        android:id="@+id/textView6"
+        android:textSize="20dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:id="@+id/TFemail" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Sex"
+        android:id="@+id/textView12"
+        android:textSize="20dp" />
+
+    <EditText
+        android:layout_width="373dp"
+        android:layout_height="31dp"
+        android:id="@+id/TFsex" />
+
+    <TextView
+        android:layout_width="192dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Username"
+        android:id="@+id/textView7"
+        android:textSize="20dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="27dp"
+        android:id="@+id/TFuser" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="BirthDate"
+        android:id="@+id/textView11"
+        android:layout_weight="0.13"
+        android:textSize="20dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="29dp"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/TFbirthdate" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        android:id="@+id/textView8"
+        android:layout_weight="0.06"
+        android:textSize="20dp"
+        android:textIsSelectable="false"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="29dp"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/TFpass1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Confirm Password"
+        android:id="@+id/textView9"
+        android:textSize="20dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="31dp"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/TFpass2" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SignUp"
+        android:id="@+id/Bsignup"
+        android:layout_gravity="right"
+        android:onClick="onClick" />
+    <Button
+        android:id="@+id/btnDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_display" />
+
+</LinearLayout>
+
+
+
+
+
