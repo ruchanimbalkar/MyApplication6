@@ -68,11 +68,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     Toast.makeText(getApplicationContext(),
                             "Enter Password", Toast.LENGTH_SHORT).show();
                 }
-                else
-                {
-                    Toast.makeText(getApplicationContext(),
-                            "Email and Password field are empty", Toast.LENGTH_SHORT).show();
-                }
+
 
 
             }
